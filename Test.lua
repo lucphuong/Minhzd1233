@@ -35,7 +35,6 @@ local Window = Rayfield:CreateWindow({
 })
 
 local MainTab = Window:CreateTab("🏡 Home 🏡", nil) -- Title, Image
-local MainSection = Tab:CreateSection("Fun Stuff")
 
 local Options = Rayfield.Options
 
