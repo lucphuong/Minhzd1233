@@ -1049,6 +1049,25 @@ function Tween2(P1)
    end,
 })
 
+MainTab:AddToggle({
+    Name = "Auto Click 30/s Smooth",
+    Default = false,
+    Callback = function(Value)
+        if Value then
+            spawn(function()
+                while Value do
+                    for i = 1, 30 do
+                        -- Thay bằng hành động click của game
+                        print("Click!") 
+                        -- Ví dụ: game.ReplicatedStorage.ClickEvent:FireServer()
+                        wait(0.033) -- ~1s/30 click
+                    end
+                end
+            end)
+        end
+    end
+})
+
 local Slider = MainTab:CreateSlider({
    Name = "Walkspeed",
    Range = {0, 500},
